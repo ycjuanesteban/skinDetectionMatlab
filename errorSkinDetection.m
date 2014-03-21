@@ -44,7 +44,7 @@ for i=1:(f-1)
 end
 
 %Muestro el resultado
-disp('Número de errores hallados: ');
+disp('Número de errores  hallados: ');
 disp(contTotal);
 disp('Número total de pixeles recorridos: ');
 disp(totalPix);
