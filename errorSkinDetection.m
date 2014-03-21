@@ -1,20 +1,20 @@
-%Directorios de entrada y salida de imagenes
+%Directorios de entrada y salida de imágenes
 dirProceso = 'Salida_Proceso\';
 dirSegmento = 'Segmentadas\';
-
+ 
 %Para mostrar el porcentaje de error en cada imagen cambiarlo a 1
 porcentajeximagen = 0;
-
+ 
 %Leo los directorios de las imagenes
 imgProceso = dir(strcat(dirProceso,'*.jpg'));
 imgSegmento = dir(strcat(dirSegmento,'*.jpg'));
 [f c] = size(imgProceso);
-
+ 
 %Declaro las variables necesarias para operar y dar el error medio.
 umbral = 50;    
 contTotal = 0;       
 totalPix = 0;
-
+ 
 for i=1:(f-1)
     contLocal = 0;
     %Leo imagen por imagen
@@ -42,7 +42,7 @@ for i=1:(f-1)
         disp(strcat(imgProceso(i).name),int2str(contLocal/(fil*col)));
     end
 end
-
+ 
 %Muestro el resultado
 disp('Número de errores  hallados: ');
 disp(contTotal);
@@ -50,3 +50,4 @@ disp('Número total de pixeles recorridos: ');
 disp(totalPix);
 disp('Porcentaje de error: ');
 disp(contTotal/totalPix*100);
+
