@@ -46,7 +46,7 @@ end
 %Muestro el resultado
 disp('Número de errores hallados: ');
 disp(contTotal);
-disp('Número de total de pixeles recorridos: ');
+disp('Número total de pixeles recorridos: ');
 disp(totalPix);
 disp('Porcentaje de error: ');
 disp(contTotal/totalPix*100);
