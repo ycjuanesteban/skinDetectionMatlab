@@ -24,8 +24,7 @@ for imagen = 1 : f
         for j=1:(col - 1)
             maximo = max(max(I(i,j,1),I(i,j,2)),I(i,j,3));
             minimo = min(min(I(i,j,1),I(i,j,2)),I(i,j,3)); 
-            if not(I(i,j,1) > 95 && I(i,j,2) > 40 && I(i,j,3) > 20 && ( maximo - minimo ) > 20 && 
-                abs(I(i,j,1) - I(i,j,2)) > 20 && I(i,j,1) > I(i,j,2) && I(i,j,1) > I(i,j,3))
+            if not(I(i,j,1) > 95 && I(i,j,2) > 40 && I(i,j,3) > 20 && ( maximo - minimo ) > 20 && abs(I(i,j,1) - I(i,j,2)) > 20 && I(i,j,1) > I(i,j,2) && I(i,j,1) > I(i,j,3))
                 I(i,j,1) = 255;
                 I(i,j,2) = 255;
                 I(i,j,3) = 255;

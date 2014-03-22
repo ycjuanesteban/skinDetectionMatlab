@@ -2,9 +2,6 @@
 dirProceso = 'Salida_Proceso\';
 dirSegmento = 'Segmentadas\';
  
-%Para mostrar el porcentaje de error en cada imagen cambiarlo a 1
-porcentajeximagen = 0;
- 
 %Leo los directorios de las imagenes
 imgProceso = dir(strcat(dirProceso,'*.jpg'));
 imgSegmento = dir(strcat(dirSegmento,'*.jpg'));
@@ -34,17 +31,13 @@ for i=1:(f-1)
             %de ser verdad cuento un pixel
             if imgDif(j,k,1) > umbral && imgDif(j,k,2) > umbral && imgDif(j,k,3) > umbral
                 contTotal = contTotal + 1;
-                contLocal = contLocal + 1;
             end
         end
-    end
-    if porcentajeximagen == 1
-        disp(strcat(imgProceso(i).name),int2str(contLocal/(fil*col)));
     end
 end
  
 %Muestro el resultado
-disp('Número de errores  hallados: ');
+disp('Número de errores hallados por pixel: ');
 disp(contTotal);
 disp('Número total de pixeles recorridos: ');
 disp(totalPix);
